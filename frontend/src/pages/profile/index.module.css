@@ -1,0 +1,208 @@
+/* Overall container */
+.container {
+  padding: 2rem;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Backdrop container */
+.backDropContainer {
+  width: 100%;
+  height: 30vh;
+  background: url("https://media.istockphoto.com/id/1317584985/photo/social-media-and-network.jpg?s=612x612&w=0&k=20&c=0d74KNiIifGvT10QDYvvsAchywxec4Xqk10-U_oe5IY=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.backDrop__overlay {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  text-align: center;
+  z-index: 4;
+  transition: all 0.4s;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backDrop__overlay:hover {
+  background: black;
+  opacity: 0.8;
+}
+
+/* Profile image */
+.profileImage {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  z-index: 2;
+}
+
+/* Profile details section */
+.profileContainer__details {
+  padding-top: 6.6rem;
+}
+
+/* Work History */
+.workHistory {
+  margin-top: 2rem;
+}
+
+.workHistoryContainer {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.workHistoryCard {
+  min-width: 250px;
+  max-width: 350px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workHistoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card profile container */
+
+.card__profileContainer {
+  display: flex;
+}
+
+.card__profileContainer > img {
+  width: 3.4rem;
+  height: 3.4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Post card */
+.postCard {
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.postActions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.profileContainer__details input {
+  outline: none;
+  border-style: none;
+  padding-inline: 10px;
+  padding-block: 9px;
+  width: fit-content;
+}
+
+.nameEdit {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.connectBtn {
+  padding: 0.5rem 1.5rem; /* Increased padding */
+  background: #007bff; /* A standard blue color */
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 25px; /* Pill-shaped buttons */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease; /* Smooth hover effect */
+  width: fit-content;
+}
+
+.profileContainer__details textarea {
+  outline: none;
+  border: none;
+  margin-top: 0.4rem;
+  padding-inline: 10px;
+  padding-block: 9px;
+  font-family: "Poppins" !important;
+  font-size: 1.1rem;
+}
+
+.addWorkButton {
+  padding-inline: 1.3rem;
+  background: white;
+  border: 1px dotted silver;
+  border-radius: 10px;
+  padding-block: 1.2rem;
+  cursor: pointer;
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgb(0, 0, 0, 0.7);
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.allCommentsContainer {
+  width: 40vw;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputField {
+  padding-inline: 1.3rem;
+  padding-block: 0.8rem;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid silver;
+  width: 100%;
+}
+
+

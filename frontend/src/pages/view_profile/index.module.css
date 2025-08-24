@@ -1,0 +1,165 @@
+/*
+ * Overall container for the profile page
+ * Added a subtle box-shadow for a card-like effect
+ */
+.container {
+  padding: 2rem;
+  background: #f8f9fa; /* A very light grey for a clean look */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 15px; /* Softer, more modern corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/*
+ * The background image container
+ * Enhanced with a subtle overlay to make the profile image stand out
+ */
+/* Backdrop container */
+.backDropContainer {
+  width: 100%;
+  height: 30vh;
+  background: url("https://media.istockphoto.com/id/1317584985/photo/social-media-and-network.jpg?s=612x612&w=0&k=20&c=0d74KNiIifGvT10QDYvvsAchywxec4Xqk10-U_oe5IY=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.backDrop__overlay {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  text-align: center;
+  z-index: 4;
+  transition: all 0.4s;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backDrop__overlay:hover {
+  background: black;
+  opacity: 0.8;
+}
+
+/* Profile image */
+.profileImage {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  z-index: 2;
+}
+
+/*
+ * Profile details section
+ * Adjusted padding for better spacing after the image
+ */
+.profileContainer__details {
+  padding-top: 6.6rem;
+}
+
+/*
+ * Connect and Connected buttons
+ * Gave them more distinct styling for better user feedback
+ */
+.connectBtn {
+  padding: 0.5rem 1.5rem; /* Increased padding */
+  background: #007bff; /* A standard blue color */
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 25px; /* Pill-shaped buttons */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.connectBtn:hover {
+  background: #0056b3;
+}
+
+.connectedButton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #007bff; /* Blue border to match the connect button */
+  outline: none;
+  color: #007bff;
+  background-color: white; /* White background for contrast */
+  border-radius: 25px;
+  cursor: default;
+  font-weight: bold;
+}
+
+/*
+ * Work History section
+ * Changed flex properties for a more flexible layout
+ */
+.workHistory {
+  margin-top: 2rem;
+}
+
+.workHistoryContainer {
+  display: flex;
+  gap: 1.5rem; /* Increased gap */
+  padding-top: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Aligns cards to the start */
+}
+
+/*
+ * Individual work history card
+ * Added a stronger box-shadow and a clean white background
+ */
+.workHistoryCard {
+  min-width: 250px;
+  max-width: 350px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Stronger, more visible shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workHistoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Lift on hover */
+}
+
+.card__profileContainer {
+  display: flex;
+}
+
+.card__profileContainer > img {
+  width: 3.4rem;
+  height: 3.4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileContainer__flex {
+  display: flex;
+  gap: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .profileContainer__flex {
+    flex-direction: column;
+  }
+}

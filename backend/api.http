@@ -1,0 +1,72 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "testuser2",
+    "password": "testuser2",
+    "email": "testuser2@test.com",
+    "name": "Altamash"
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "testuser2@test.com",
+    "password": "testuser2"
+}
+
+
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+# {
+#     "token": "82435169bf09466db3585c7a14d9fa44e783ecd258980e400fad9136b09a1cc3"
+# }
+
+{
+    "token": "fca63135f945b88d4800f3c410963cb9cd1496be4db019590641526b5c115579"
+}
+
+###
+
+POST http://localhost:9090/user/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+  "token": "1956b7ed4c1c7b7cea7dda98c91ec78413337dfdee434b84f89771ca566ecdfa",
+  "bio": "Hi I Am Kasim, I am from Mumbai, I work as XYZ company",
+  "currentPost": "Intern",
+  "postWork": [
+    {
+      "company": "none",
+      "position": "intern",
+      "years": "8 months"
+    }
+  ],
+  "education": [
+    {
+      "school": "AIKTC",
+      "degree": "B.E",
+      "fieldOfStudy": "2019-2024"
+    }
+  ],
+  "pastWork": [
+    {
+      "company": "DEF Tech",
+      "position": "Full Stack Developer",
+      "years": "1 year"
+    }
+  ]
+}
+
+
+###
+
+GET http://localhost:9090/user/get_all_users HTTP/1.1
+
