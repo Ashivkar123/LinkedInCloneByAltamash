@@ -8,7 +8,16 @@ import userRoutes from "./routes/user.routes.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000", // local frontend
+      "https://your-frontend-site.vercel.app", // deployed frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use((req, res, next) => {

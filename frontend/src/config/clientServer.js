@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const clientServer = axios.create({
-  baseURL: "http://localhost:9090/", // Change to your backend API
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
