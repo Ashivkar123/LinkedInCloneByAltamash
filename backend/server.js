@@ -1,4 +1,3 @@
-
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
@@ -34,9 +33,7 @@ app.use("/user", userRoutes);
 
 const start = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://ashivkar999:A_shivkar999linkedinclone@linkedinclone.prxtrjo.mongodb.net/?retryWrites=true&w=majority&appName=linkedinclone"
-    );
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("✅ MongoDB connected");
   } catch (err) {
     console.error("❌ MongoDB connection error:", err.message);
@@ -48,4 +45,3 @@ const start = async () => {
 };
 
 start();
-
